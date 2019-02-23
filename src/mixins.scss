@@ -20,9 +20,16 @@
 }
 
 @mixin box-sizing($property) {
--webkit-box-sizing: $property;
-   -moz-box-sizing: $property;
-        box-sizing: $property;
+  -webkit-box-sizing: $property;
+     -moz-box-sizing: $property;
+          box-sizing: $property;
+}
+
+@mixin box-shadow($property) {
+
+  -webkit-box-shadow: $property;
+     -moz-box-shadow: $property;
+          box-shadow: $property;
 }
 
 @mixin opacity($hundred, $tenth) {

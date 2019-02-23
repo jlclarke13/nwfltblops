@@ -28,33 +28,122 @@ img {
 	> li {
 		display: flex;
 		width: 50%;
+	}
+}
 
-		> .card {
-			@extend %block-relative;
+.card {
+	@extend %block-relative;
+	width: 100%;
+	padding: 0 $small-margin $med-margin;
+
+	header {
+		@extend %block-relative;
+		width: 100%;
+		height: 300px;
+		object-fit: cover;
+
+		h3 {
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+			color: #fff;
+			font-weight: 700;
+			font-size: 3em;
+			text-shadow: 1px 3px 3px rgba(0, 0, 0, 0);
+		}
+
+		img {
 			width: 100%;
-			padding: 0 $small-margin $med-margin;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
 
-			header {
-				@extend %block-relative;
+	.content {
+		.inner {
+			padding: $small-margin;
+		}
+	}
+}
+
+
+@media screen and (max-width: 1559px) {
+	.card {
+		header {
+			height: 200px;
+
+			h3 {
+				font-size: 2em;
+				right: auto;
+				left: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	h2 {
+		font-size: 5em;
+	}
+
+	.card {
+		header {
+			height: 300px;
+
+			h3 {
+				font-size: 3em;
+			}
+		}
+
+		.content {
+			.inner {
+				padding: $small-margin + 4px;
+			}
+		}
+	}
+
+	.cards {
+		> li {
+			width: 100%;
+		}
+	}
+}
+
+@media screen and (max-width: 960px) {
+	h2 {
+		font-size: 3em;
+		margin-left: 31px;
+	}
+
+	.inner {
+		padding: $med-margin 0;
+	}
+
+	.card {
+		padding: 0 0 $med-margin;
+
+		header {
+			height: 200px;
+
+			h3 {
+				font-size: 2em;
+				left: 33px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.card {
+		header {
+			h3 {
+				font-size: 2em;
+				bottom: auto;
+				top: 50%;
+				left: 50%;
 				width: 100%;
-				height: 300px;
-				object-fit: cover;
-
-				h3 {
-					position: absolute;
-					right: 20px;
-					bottom: 20px;
-					color: #fff;
-					font-weight: 700;
-					font-size: 3em;
-					text-shadow: 1px 3px 3px rgba(0, 0, 0, 0);
-				}
-
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-				}
+				text-align: center;
+				transform: translate(-50%, -50%);
 			}
 		}
 	}

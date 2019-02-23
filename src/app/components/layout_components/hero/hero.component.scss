@@ -45,68 +45,23 @@ h1 {
 	margin-left: $large-margin - 10px;
 }
 
-.circle-container {
-	margin-top: 60px;
-	margin-left: $large-margin;
+
+@media screen and (max-width: 1080px) {
+	h1 {
+		font-size: 6em;
+	}
 }
 
-.cs-splash {
-	@extend %block-relative-full;
-
-	.first,
-	.second,
-	.third {
-		@include opacity(0, 0);
-		@include animation(title-float 2000ms 1);
-		@include animation-fill-mode(forwards);
-		position: relative;
+@media screen and (max-width: 960px) {
+	h1 {
+		font-size: 4em;
 	}
 
-	.second {
-		@include animation-delay(450ms);
-	}
-
-	.third {
-		@include animation-delay(900ms);
+	.inner {
+		height: 600px;
 	}
 
 	.title-container {
-		margin: 0;
-		padding-left: $large-margin;
-		position: absolute;
-		left: 0;
-		top:50%;
-		transform: translate(0, -50%);
-		color: #fff;
-	}
-
-	.ls-container {
-		position: absolute;
-		width: 68%;
-		height: 100%;
-		background: #000;
-	}
-	.rs-container {
-		margin:0;
-		position: absolute;
-		width: 32%;
-		height: auto;
-		right: 0;
-		left: auto;
-		top: 50%;
-		transform: translate(0, -50%);
-		text-align: center;
-
-		h2 {
-			margin-top:20px;
-			margin-left: 20px;
-			font-size: 3em;
-		}
-
-		.circle-container {
-			@extend %in-block-relative;
-			margin: 0;
-			width: 86%;
-		}
+		margin-left: $large-margin-mobile - 10px;
 	}
 }
