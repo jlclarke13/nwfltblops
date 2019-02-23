@@ -7,6 +7,7 @@ import { FooterComponent } from './components/layout_components/footer/footer.co
 import { HeaderComponent } from './components/layout_components/header/header.component';
 import { HeroComponent } from './components/layout_components/hero/hero.component';
 import { MainNavComponent } from './components/layout_components/main-nav/main-nav.component';
+import { AddClassOnScrollDirective } from './directives/add-class-on-scroll/add-class-on-scroll.directive';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { MainNavComponent } from './components/layout_components/main-nav/main-n
     FooterComponent,
     HeaderComponent,
     HeroComponent,
-    MainNavComponent
+    MainNavComponent,
+    AddClassOnScrollDirective
   ],
   imports: [
     BrowserModule,
