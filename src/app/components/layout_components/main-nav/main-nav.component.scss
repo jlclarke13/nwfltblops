@@ -1,0 +1,70 @@
+@import '~src/imports';
+
+nav {
+	@extend %block-fixed;
+	width: 100%;
+	height: $main-nav-height;
+}
+
+.inner {
+	@extend %block-relative-full;
+	padding: 0 $large-margin;
+}
+
+.inner-container {
+	@extend %block-relative-full;
+
+	> * {
+		float: left;
+	}
+}
+
+ul {
+	@extend %in-block-relative;	
+	height: 100%;
+}
+
+li {
+	@extend %block-relative;
+	height: 100%;
+	float: left;
+
+	&:before {
+		@extend %block-absolute-full;
+		@include opacity(0, 0);
+		@include animation(underline-F2R 300ms 1);
+		content: '';
+		top: auto;
+		left: 0%;
+		bottom: 0;
+		height:2px;
+		width: 1px;
+		background: #fff;
+	}
+
+	&:hover {
+		&:before {
+		@include opacity(100, 1);
+			@include animation(underline-L2F 300ms 1);
+			left: 0;
+			width: 100%;
+		}
+	}
+
+	a {
+		@extend %main-nav-a;
+	}
+}
+
+.logo {
+	@extend %in-block-relative;
+	height: 100%;
+	line-height: $main-nav-height;
+
+	a {
+		@extend %main-nav-a;
+		margin-left: -$main-nav-a-padding;
+		text-transform: uppercase;
+		font-weight: 700;
+	}
+}

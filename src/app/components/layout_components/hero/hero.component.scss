@@ -1,0 +1,112 @@
+@import '~src/imports';
+
+h1 {
+	display: block;
+	position: relative;
+	font-size: 8em;
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.inner {
+	@extend %block-relative;
+	width: 100%;
+	height: 800px;
+	color: #fff;
+
+	> * {
+		z-index: 2;
+	}
+}
+
+.inner-bg-black {
+	background: #000;
+}
+
+.background {
+	@extend %underlay-overlay;
+	z-index: 1;
+
+	&:after {
+		@extend %underlay-overlay;
+		content: '';
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#000000+0,7f7f7f+100 */
+		background: rgba(127, 127, 127, 0.5);
+		background: -moz-linear-gradient(-45deg, rgba(0,0,0,0.43) 0%, rgba(127,127,127,0.43) 100%); /* FF3.6-15 */
+		background: -webkit-linear-gradient(-45deg, rgba(0,0,0,0.43) 0%,rgba(127,127,127,0.43) 100%); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(135deg, rgba(0,0,0,0.43) 0%,rgba(127,127,127,0.43) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000000', endColorstr='#7f7f7f',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	}
+}
+
+.title-container {
+	@extend %in-block-relative;
+	margin-top: $large-margin;
+	margin-left: $large-margin - 10px;
+}
+
+.circle-container {
+	margin-top: 60px;
+	margin-left: $large-margin;
+}
+
+.cs-splash {
+	@extend %block-relative-full;
+
+	.first,
+	.second,
+	.third {
+		@include opacity(0, 0);
+		@include animation(title-float 2000ms 1);
+		@include animation-fill-mode(forwards);
+		position: relative;
+	}
+
+	.second {
+		@include animation-delay(450ms);
+	}
+
+	.third {
+		@include animation-delay(900ms);
+	}
+
+	.title-container {
+		margin: 0;
+		padding-left: $large-margin;
+		position: absolute;
+		left: 0;
+		top:50%;
+		transform: translate(0, -50%);
+		color: #fff;
+	}
+
+	.ls-container {
+		position: absolute;
+		width: 68%;
+		height: 100%;
+		background: #000;
+	}
+	.rs-container {
+		margin:0;
+		position: absolute;
+		width: 32%;
+		height: auto;
+		right: 0;
+		left: auto;
+		top: 50%;
+		transform: translate(0, -50%);
+		text-align: center;
+
+		h2 {
+			margin-top:20px;
+			margin-left: 20px;
+			font-size: 3em;
+		}
+
+		.circle-container {
+			@extend %in-block-relative;
+			margin: 0;
+			width: 86%;
+		}
+	}
+}

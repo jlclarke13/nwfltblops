@@ -1,0 +1,18 @@
+<app-hero [innerBgClass]="'inner-bg-black'" [bgClass]="''">
+	<span hero-title [innerHtml]="heroTitle"></span>
+</app-hero>
+<div>
+	<ul>
+		<li *ngFor="let category of fits">
+			<h2>{{ category.category }}</h2>
+			<ul>
+				<li *ngFor="let ship of category.ships">
+					<h3>{{ ship.name }}</h3>
+					<pre>{{ ship.fit }}</pre>
+				</li>
+			</ul>
+		</li>
+	</ul>
+</div>
+
+

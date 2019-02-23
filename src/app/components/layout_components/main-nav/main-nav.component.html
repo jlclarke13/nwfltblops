@@ -1,0 +1,14 @@
+<nav>
+	<div class="inner">
+		<div class="inner-container clearfix">
+			<div class="logo">
+				<a href="/home">NWFLT</a>
+			</div>
+			<ul class="clearfix">
+				<li *ngFor="let item of menuItems">
+					<a href="{{ item.location }}"><span>{{ item.display }}</span></a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</nav>

@@ -1,0 +1,53 @@
+%block-relative {
+	display: block;
+	position: relative;
+	width: auto;
+	height: auto;
+}
+
+%in-block-relative {
+	@extend %block-relative;
+	display: inline-block;
+}
+
+%block-relative-full {
+	@extend %block-relative;
+	width: 100%;
+	height: 100%;
+}
+
+%block-absolute {
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: auto;
+	height: auto;
+}
+
+%block-absolute-full {
+	@extend %block-absolute;
+	width: 100%;
+	height: 100%;
+}
+
+%block-fixed {
+	@extend %block-absolute;
+	position: fixed;
+}
+
+%underlay-overlay {
+	@extend %block-absolute;
+	width: 100%;
+	height: 100%;
+}
+
+%main-nav-a {
+	@extend %block-relative;
+	height: 100%;
+	padding: 0 $main-nav-a-padding;
+	text-decoration: none;
+	line-height: $main-nav-height;
+	color: #fff;
+	cursor: pointer;
+}
