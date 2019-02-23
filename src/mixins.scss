@@ -1,17 +1,3 @@
-@mixin box-sizing($property) {
--webkit-box-sizing: $property;
-	 -moz-box-sizing: $property;
-	 			box-sizing: $property;
-}
-
-@mixin opacity($hundred, $tenth) {
-  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$hundred)";
-  filter: alpha(opacity=$hundred);
-  -moz-opacity: $tenth;
-  -khtml-opacity: $tenth;
-  opacity: $tenth; 
-}
-
 @mixin animation($property) {
 	-webkit-animation: $property; /* Safari 4+ */
   	 -moz-animation: $property; /* Fx 5+ */
@@ -31,4 +17,18 @@
      -moz-animation-fill-mode: $property; /* Fx 5+ */
        -o-animation-fill-mode: $property; /* Opera 12+ */
           animation-fill-mode: $property; /* IE 10+, Fx 29+ */
+}
+
+@mixin box-sizing($property) {
+-webkit-box-sizing: $property;
+   -moz-box-sizing: $property;
+        box-sizing: $property;
+}
+
+@mixin opacity($hundred, $tenth) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=$hundred)";
+  filter: alpha(opacity=$hundred);
+  -moz-opacity: $tenth;
+  -khtml-opacity: $tenth;
+  opacity: $tenth; 
 }

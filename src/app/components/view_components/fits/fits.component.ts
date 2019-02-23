@@ -15,6 +15,7 @@ export class FitsComponent implements OnInit {
 			ships: [
 				{
 					name: 'Blops Tackle Astero',
+					imgPath: 'astero.png',
 					fit: `[Astero, blops tackle astero]
 Small Ancillary Armor Repairer
 200mm Steel Plates II
@@ -48,6 +49,7 @@ Nanite Repair Paste x164`
 			ships: [
 				{
 					name: 'Falcon',
+					imgPath: 'falcon.png',
 					fit: `[Falcon, Jam Falcon] 
 Damage Control II
 'Hypnos' Signal Distortion Amplifier I
@@ -85,6 +87,7 @@ Nanite Repair Paste x375`
 			ships: [
 				{
 					name: 'Hound',
+					imgPath: 'hound.png',
 					fit: `[Hound, Hound]
 Nanofiber Internal Structure II
 Ballistic Control System II
@@ -110,6 +113,7 @@ Nanite Repair Paste x120`
 				},
 				{
 					name: 'Polarized Hound',
+					imgPath: 'hound2.png',
 					fit: `[Hound, Polarized Hound]
 Ballistic Control System II
 Ballistic Control System II
@@ -136,6 +140,7 @@ Nanite Repair Paste x350`
 				},
 				{
 					name: 'Purifier',
+					imgPath: 'purifier.png',
 					fit: `[Purifier, Purifier]
 Nanofiber Internal Structure II
 Ballistic Control System II
@@ -162,6 +167,7 @@ Nanite Repair Paste x30`
 				},
 				{
 					name: 'Polarized Purifier',
+					imgPath: 'purifier2.png',
 					fit: `[Purifier, PolarizedPurifier]
 Nanofiber Internal Structure II
 Ballistic Control System II
@@ -188,6 +194,7 @@ Nanite Repair Paste x250`
 				},
 				{
 					name: 'Manticore',
+					imgPath: 'manticore.png',
 					fit: `[Manticore, Manticore]
 Nanofiber Internal Structure II
 Ballistic Control System II
@@ -215,6 +222,7 @@ Targeting Range Dampening Script x1`
 				},
 				{
 					name: 'Nemesis',
+					imgPath: 'nemesis.png',
 					fit: `[Nemesis, Nemesis]
 Micro Auxiliary Power Core I
 Ballistic Control System II

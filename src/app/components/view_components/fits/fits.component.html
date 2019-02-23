@@ -2,17 +2,22 @@
 	<span hero-title [innerHtml]="heroTitle"></span>
 </app-hero>
 <div>
-	<ul>
-		<li *ngFor="let category of fits">
-			<h2>{{ category.category }}</h2>
-			<ul>
-				<li *ngFor="let ship of category.ships">
-					<h3>{{ ship.name }}</h3>
-					<pre>{{ ship.fit }}</pre>
-				</li>
-			</ul>
-		</li>
-	</ul>
+	<div class="inner">
+		<ul>
+			<li *ngFor="let category of fits">
+				<h2>{{ category.category }}</h2>
+				<ul class="cards clearfix">
+					<li *ngFor="let ship of category.ships">
+						<div class="card">
+							<header>
+								<img class="cover" [src]="'assets/images/' + ship.imgPath" />
+								<h3>{{ ship.name }}</h3>
+							</header>
+							<pre>{{ ship.fit }}</pre>
+						</div>
+					</li>
+				</ul>
+			</li>
+		</ul>
+	</div>
 </div>
-
-
