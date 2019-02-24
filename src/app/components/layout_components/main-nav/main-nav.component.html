@@ -9,7 +9,7 @@
 				<a [routerLink]="'/home'">NWFLT</a>
 			</div>
 			<ul class="nav clearfix">
-				<li *ngFor="let item of menuItems" [routerLinkActive]="'active'">
+				<li *ngFor="let item of menuItems" [routerLinkActive]="'active'" (mouseenter)="addAnim()" [ngClass]="includeAnim ? 'include-anim' : ''">
 					<a [routerLink]="item.location" (click)="navTo()"><span>{{ item.display }}</span></a>
 				</li>
 			</ul>

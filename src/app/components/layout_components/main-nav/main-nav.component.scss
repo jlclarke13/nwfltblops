@@ -17,6 +17,7 @@ nav {
 	@extend %block-relative-full;
 	padding: 0 $large-margin;
 	background: rgba(32, 33, 36, 0);
+	@include transition(background 300ms ease);
 }
 
 .inner-container {
@@ -56,10 +57,15 @@ li {
 	height: 100%;
 	float: left;
 
+	&.include-anim {
+		&:before {
+			@include animation(underline-exit 300ms 1);
+		}
+	}
+
 	&:before {
 		@extend %block-absolute-full;
 		@include opacity(0, 0);
-		@include animation(underline-exit 300ms 1);
 		content: '';
 		top: auto;
 		left: 0%;
@@ -148,6 +154,9 @@ li {
 		}
 	}
 	nav {
+		@include transition(bottom 600ms ease-out);
+		bottom: 100%;
+
 		&.active {
 			height: auto;
 			bottom: 0;

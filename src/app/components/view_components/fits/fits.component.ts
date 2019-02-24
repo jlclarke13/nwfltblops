@@ -240,38 +240,73 @@ Nanite Repair Paste x164`
 			category: 'Electronics',
 			ships: [
 				{
+					name: 'Pilgrim',
+					imgPath: 'pilgrim.png',
+					state: 'uncopied',
+					fit: `[Pilgrim, NWFLT Pilgrim]
+
+Damage Control II
+Imperial Navy Energized Adaptive Nano Membrane
+Federation Navy 1600mm Steel Plates
+Imperial Navy Energized Adaptive Nano Membrane
+Power Diagnostic System II
+
+50MN Quad LiF Restrained Microwarpdrive
+Tracking Disruptor II, Tracking Speed Disruption Script
+Tracking Disruptor II, Tracking Speed Disruption Script
+Tracking Disruptor II, Tracking Speed Disruption Script
+Sensor Booster II, Scan Resolution Script
+
+Covert Ops Cloaking Device II
+Corpum C-Type Medium Energy Neutralizer
+Corpum C-Type Medium Energy Nosferatu
+Corpum C-Type Medium Energy Neutralizer
+
+Medium Tracking Diagnostic Subroutines II
+Medium Polycarbon Engine Housing I
+
+
+Warrior II x5
+Hornet EC-300 x5
+Valkyrie II x5
+Valkyrie II x3
+Warrior II x4
+
+
+Optimal Range Disruption Script x3`
+				},
+				{
 					name: 'Falcon',
 					imgPath: 'falcon.png',
 					state: 'uncopied',
-					fit: `[Falcon, Jam Falcon] 
+					fit: `[Falcon, NWFLT Falcon]
+
 Damage Control II
-'Hypnos' Signal Distortion Amplifier I
-'Hypnos' Signal Distortion Amplifier I
+Signal Distortion Amplifier II
+Signal Distortion Amplifier II
 
-Multispectral ECM II
-Gravimetric ECM II
-50MN Quad LiF Restrained Microwarpdrive
-Radar ECM II
-EM Ward Amplifier II
-Republic Fleet Large Shield Extender
 Ladar ECM II
+Ladar ECM II
+Ladar ECM II
+50MN Quad LiF Restrained Microwarpdrive
+Republic Fleet Large Shield Extender
+Republic Fleet Large Shield Extender
+Magnetometric ECM II
 
+Medium Solace Scoped Remote Armor Repairer
+Medium Solace Scoped Remote Armor Repairer
 Covert Cynosural Field Generator I
-250mm Railgun II
-250mm Railgun II
 Covert Ops Cloaking Device II
 
-Medium Targeting Systems Stabilizer II
-Medium Particle Dispersion Augmentor II
+Medium Particle Dispersion Projector II
+Medium Particle Dispersion Projector II
 
 
+Warrior II x2
 
-Hornet EC-300 x2
 
-Ladar ECM II x1
-Javelin M x785
-Spike M x964
-Nanite Repair Paste x375`
+Liquid Ozone x300
+Nanite Repair Paste x200`
 				}
 			]
 		}

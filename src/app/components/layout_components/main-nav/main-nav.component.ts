@@ -11,6 +11,8 @@ export class MainNavComponent implements OnInit {
 
 	public showNav: boolean = false;
 
+  public includeAnim: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
@@ -22,6 +24,13 @@ export class MainNavComponent implements OnInit {
 
   navTo() {
     this.showNav = false;
+  }
+
+  addAnim() {
+    console.log("words");
+    if (this.includeAnim === false) {
+      this.includeAnim = true;
+    }
   }
 
 }
