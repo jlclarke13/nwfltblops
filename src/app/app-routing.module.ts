@@ -18,7 +18,7 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
 
-export const routingComponents = [
+export const RoutingComponents = [
 							PageNotFoundComponent,
 							HomeComponent,
 							FitsComponent

@@ -1,5 +1,5 @@
 <div class="inner" ngClass="{{ innerBgClass }}">
-	<div class="background" ngClass="{{ bgClass }}"></div>
+	<div class="background" ngClass="{{ bgClass }}" parallax [config]="{axis: 'Y', speed: -.3, cssUnit: 'px'}"></div>
 	<div class="title-container">
 		<h1><ng-content select="[hero-title]"></ng-content></h1>
 	</div>
