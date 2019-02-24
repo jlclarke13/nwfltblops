@@ -1,13 +1,31 @@
 import { Component, OnInit } from '@angular/core';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-fits',
   templateUrl: './fits.component.html',
-  styleUrls: ['./fits.component.scss']
+  styleUrls: ['./fits.component.scss'],
+  animations: [
+  	trigger('copyAnim', [
+  		state('uncopied', style({
+  		})),
+  		state('copied', style({
+  			color: '#3eff72'
+  		})),
+  		transition('uncopied => copied', [
+  			animate('0ms')
+  		]),
+  		transition('copied => uncopied', [
+  			animate('600ms')
+  		])
+  	])
+  ]
 })
 export class FitsComponent implements OnInit {
 
 	public heroTitle = '<div class="top-line">NWFLT</div><div class="bottom-line">Blops Fits</div>';
+
+	state: string = 'uncopied';
 
 	fits: any[] = [
 		{ 
@@ -16,6 +34,7 @@ export class FitsComponent implements OnInit {
 				{
 					name: 'Hound',
 					imgPath: 'hound.png',
+					state: 'uncopied',
 					fit: `[Hound, Hound]
 Nanofiber Internal Structure II
 Ballistic Control System II
@@ -42,6 +61,7 @@ Nanite Repair Paste x120`
 				{
 					name: 'Polarized Hound',
 					imgPath: 'hound2.png',
+					state: 'uncopied',
 					fit: `[Hound, Polarized Hound]
 Ballistic Control System II
 Ballistic Control System II
@@ -69,6 +89,7 @@ Nanite Repair Paste x350`
 				{
 					name: 'Purifier',
 					imgPath: 'purifier.png',
+					state: 'uncopied',
 					fit: `[Purifier, Purifier]
 Nanofiber Internal Structure II
 Ballistic Control System II
@@ -96,6 +117,7 @@ Nanite Repair Paste x30`
 				{
 					name: 'Polarized Purifier',
 					imgPath: 'purifier2.png',
+					state: 'uncopied',
 					fit: `[Purifier, PolarizedPurifier]
 Nanofiber Internal Structure II
 Ballistic Control System II
@@ -123,6 +145,7 @@ Nanite Repair Paste x250`
 				{
 					name: 'Manticore',
 					imgPath: 'manticore.png',
+					state: 'uncopied',
 					fit: `[Manticore, Manticore]
 Nanofiber Internal Structure II
 Ballistic Control System II
@@ -151,6 +174,7 @@ Targeting Range Dampening Script x1`
 				{
 					name: 'Nemesis',
 					imgPath: 'nemesis.png',
+					state: 'uncopied',
 					fit: `[Nemesis, Nemesis]
 Micro Auxiliary Power Core I
 Ballistic Control System II
@@ -183,6 +207,7 @@ Nanite Repair Paste x30`
 				{
 					name: 'Blops Tackle Astero',
 					imgPath: 'astero.png',
+					state: 'uncopied',
 					fit: `[Astero, blops tackle astero]
 Small Ancillary Armor Repairer
 200mm Steel Plates II
@@ -217,6 +242,7 @@ Nanite Repair Paste x164`
 				{
 					name: 'Falcon',
 					imgPath: 'falcon.png',
+					state: 'uncopied',
 					fit: `[Falcon, Jam Falcon] 
 Damage Control II
 'Hypnos' Signal Distortion Amplifier I
@@ -256,7 +282,7 @@ Nanite Repair Paste x375`
   ngOnInit() {
   }
 
-  copyFit(val: string){
+  copyFit(cidx: number, sidx: number, val: string){
     let selBox = document.createElement('textarea');
     selBox.style.position = 'fixed';
     selBox.style.left = '0';
@@ -268,6 +294,15 @@ Nanite Repair Paste x375`
     selBox.select();
     document.execCommand('copy');
     document.body.removeChild(selBox);
+
+    this.runCopiedAnim(cidx, sidx);
+  }
+
+  runCopiedAnim(cidx: number, sidx: number) {
+  	this.fits[cidx].ships[sidx].state = 'copied';
+  	setTimeout(() => {
+  		this.fits[cidx].ships[sidx].state = 'uncopied';
+  	}, 600);
   }
 
 }

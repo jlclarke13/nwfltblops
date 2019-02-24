@@ -4,14 +4,14 @@
 <div class="main-content">
 	<div class="inner">
 		<ul>
-			<li *ngFor="let category of fits">
+			<li *ngFor="let category of fits; let ci = index">
 				<h2>{{ category.category }}</h2>
 				<ul class="cards clearfix">
-					<li *ngFor="let ship of category.ships">
+					<li *ngFor="let ship of category.ships; let si = index">
 						<div class="card">
 							<header>
 								<img class="cover" [src]="'assets/images/' + ship.imgPath" />
-								<h3><a class="copy-btn" (click)="copyFit(ship.fit)"><i class="material-icons">file_copy</i></a>{{ ship.name }}</h3>
+								<h3><a class="copy-btn" (click)="copyFit(ci, si, ship.fit)" [@copyAnim]="ship.state"><i class="material-icons">file_copy</i></a>{{ ship.name }}</h3>
 							</header>
 							<div class="content">
 								<div class="inner">

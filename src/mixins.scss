@@ -39,3 +39,10 @@
   -khtml-opacity: $tenth;
   opacity: $tenth; 
 }
+
+@mixin transition($property) {
+  -webkit-transition: $property;
+     -moz-transition: $property;
+       -o-transition: $property;
+          transition: $property;
+}
