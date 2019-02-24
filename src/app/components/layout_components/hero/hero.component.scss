@@ -6,6 +6,7 @@ h1 {
 	font-size: 8em;
 	font-weight: 700;
 	text-transform: uppercase;
+	@extend %white-on-black-text-shadow;
 }
 
 .inner {
@@ -39,6 +40,10 @@ h1 {
 	}
 }
 
+.fits-hero {
+	background: url('~src/assets/images/fitsHero.png') no-repeat bottom right;
+}
+
 .title-container {
 	@extend %in-block-relative;
 	margin-top: $large-margin;
@@ -63,5 +68,9 @@ h1 {
 
 	.title-container {
 		margin-left: $large-margin-mobile - 10px;
+	}
+
+	.fits-hero {
+		background: url('~src/assets/images/fitsHero.png') no-repeat bottom center;
 	}
 }

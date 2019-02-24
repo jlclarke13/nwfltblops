@@ -9,9 +9,15 @@ export class MainNavComponent implements OnInit {
 
 	@Input() menuItems: any[];
 
+	public showNav: boolean = false;
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  openNav() {
+  	this.showNav = !this.showNav;
   }
 
 }

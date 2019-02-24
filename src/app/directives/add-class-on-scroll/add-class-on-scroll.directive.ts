@@ -9,7 +9,7 @@ export class AddClassOnScrollDirective {
 	@Input('AddClassOnScroll') className: any;
 	@Input('addClassOffset') offset: number = 20;
 
-	@HostBinding('class.active') addClass: boolean;
+	@HostBinding('class.scrollActive') addClass: boolean;
 
   constructor() { }
 

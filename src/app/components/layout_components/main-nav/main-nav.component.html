@@ -1,10 +1,13 @@
-<nav [AddClassOnScroll]="active" [addClassOffset]="20">
+<nav [AddClassOnScroll]="scrollActive" [addClassOffset]="20" [ngClass]="showNav ? 'active' : ''">
 	<div class="inner">
 		<div class="inner-container clearfix">
+			<a class="hamburger" (click)="openNav()">
+				<i class="material-icons">menu</i>
+			</a>
 			<div class="logo">
 				<a [routerLink]="'/home'">NWFLT</a>
 			</div>
-			<ul class="clearfix">
+			<ul class="nav clearfix">
 				<li *ngFor="let item of menuItems" [routerLinkActive]="'active'">
 					<a [routerLink]="item.location"><span>{{ item.display }}</span></a>
 				</li>

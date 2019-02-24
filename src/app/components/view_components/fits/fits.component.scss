@@ -43,13 +43,13 @@ img {
 		object-fit: cover;
 
 		h3 {
+			@extend %white-on-black-text-shadow;
 			position: absolute;
 			right: 20px;
 			bottom: 20px;
 			color: #fff;
 			font-weight: 700;
 			font-size: 3em;
-			text-shadow: 1px 3px 3px rgba(0, 0, 0, 0);
 		}
 
 		img {
