@@ -110,6 +110,10 @@ p {
 		width: 100%;
 		padding: $med-margin ($large-margin - 30px);
 	}	
+
+	p {
+		padding: ($small-margin - 15px) $small-margin;
+	}
 }
 
 section {
@@ -124,7 +128,6 @@ section {
 		clear: both;
 	}
 }
-
 
 @media screen and (max-width: 1559px) {
 	.card {
@@ -166,5 +169,6 @@ section {
 @media screen and (max-width: 600px) {
 	h2 {
 		text-align: center;
+		margin-left: 0;
 	}
 }

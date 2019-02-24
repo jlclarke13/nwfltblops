@@ -11,7 +11,7 @@
 						<div class="card">
 							<header>
 								<img class="cover" [src]="'assets/images/' + ship.imgPath" />
-								<h3>{{ ship.name }}</h3>
+								<h3><a class="copy-btn" (click)="copyFit(ship.fit)"><i class="material-icons">file_copy</i></a>{{ ship.name }}</h3>
 							</header>
 							<div class="content">
 								<div class="inner">

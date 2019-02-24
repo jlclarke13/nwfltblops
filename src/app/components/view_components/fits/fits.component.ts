@@ -11,78 +11,6 @@ export class FitsComponent implements OnInit {
 
 	fits: any[] = [
 		{ 
-			category: 'Tackle',
-			ships: [
-				{
-					name: 'Blops Tackle Astero',
-					imgPath: 'astero.png',
-					fit: `[Astero, blops tackle astero]
-Small Ancillary Armor Repairer
-200mm Steel Plates II
-Reactive Armor Hardener
-Damage Control II
-
-Warp Scrambler II
-Warp Disruptor II
-Fleeting Compact Stasis Webifier
-5MN Quad LiF Restrained Microwarpdrive
-
-[Empty High slot]
-Covert Ops Cloaking Device II
-
-Small Trimark Armor Pump II
-Small Trimark Armor Pump II
-Small Anti-Explosive Pump II
-
-
-
-Imperial Navy Acolyte x5
-Caldari Navy Hornet x5
-Republic Fleet Warrior x5
-
-Nanite Repair Paste x164`
-				}
-			]
-		},
-		{ 
-			category: 'Electronics',
-			ships: [
-				{
-					name: 'Falcon',
-					imgPath: 'falcon.png',
-					fit: `[Falcon, Jam Falcon] 
-Damage Control II
-'Hypnos' Signal Distortion Amplifier I
-'Hypnos' Signal Distortion Amplifier I
-
-Multispectral ECM II
-Gravimetric ECM II
-50MN Quad LiF Restrained Microwarpdrive
-Radar ECM II
-EM Ward Amplifier II
-Republic Fleet Large Shield Extender
-Ladar ECM II
-
-Covert Cynosural Field Generator I
-250mm Railgun II
-250mm Railgun II
-Covert Ops Cloaking Device II
-
-Medium Targeting Systems Stabilizer II
-Medium Particle Dispersion Augmentor II
-
-
-
-Hornet EC-300 x2
-
-Ladar ECM II x1
-Javelin M x785
-Spike M x964
-Nanite Repair Paste x375`
-				}
-			]
-		},
-		{ 
 			category: 'Damage',
 			ships: [
 				{
@@ -248,12 +176,98 @@ Caldari Navy Inferno Torpedo x408
 Nanite Repair Paste x30`
 				}
 			]
+		},
+		{ 
+			category: 'Tackle',
+			ships: [
+				{
+					name: 'Blops Tackle Astero',
+					imgPath: 'astero.png',
+					fit: `[Astero, blops tackle astero]
+Small Ancillary Armor Repairer
+200mm Steel Plates II
+Reactive Armor Hardener
+Damage Control II
+
+Warp Scrambler II
+Warp Disruptor II
+Fleeting Compact Stasis Webifier
+5MN Quad LiF Restrained Microwarpdrive
+
+[Empty High slot]
+Covert Ops Cloaking Device II
+
+Small Trimark Armor Pump II
+Small Trimark Armor Pump II
+Small Anti-Explosive Pump II
+
+
+
+Imperial Navy Acolyte x5
+Caldari Navy Hornet x5
+Republic Fleet Warrior x5
+
+Nanite Repair Paste x164`
+				}
+			]
+		},
+		{ 
+			category: 'Electronics',
+			ships: [
+				{
+					name: 'Falcon',
+					imgPath: 'falcon.png',
+					fit: `[Falcon, Jam Falcon] 
+Damage Control II
+'Hypnos' Signal Distortion Amplifier I
+'Hypnos' Signal Distortion Amplifier I
+
+Multispectral ECM II
+Gravimetric ECM II
+50MN Quad LiF Restrained Microwarpdrive
+Radar ECM II
+EM Ward Amplifier II
+Republic Fleet Large Shield Extender
+Ladar ECM II
+
+Covert Cynosural Field Generator I
+250mm Railgun II
+250mm Railgun II
+Covert Ops Cloaking Device II
+
+Medium Targeting Systems Stabilizer II
+Medium Particle Dispersion Augmentor II
+
+
+
+Hornet EC-300 x2
+
+Ladar ECM II x1
+Javelin M x785
+Spike M x964
+Nanite Repair Paste x375`
+				}
+			]
 		}
 	];
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  copyFit(val: string){
+    let selBox = document.createElement('textarea');
+    selBox.style.position = 'fixed';
+    selBox.style.left = '0';
+    selBox.style.top = '0';
+    selBox.style.opacity = '0';
+    selBox.value = val;
+    document.body.appendChild(selBox);
+    selBox.focus();
+    selBox.select();
+    document.execCommand('copy');
+    document.body.removeChild(selBox);
   }
 
 }
