@@ -2,14 +2,15 @@
 	<div class="inner">
 		<div class="inner-container clearfix">
 			<a class="hamburger" (click)="openNav()">
-				<i class="material-icons">menu</i>
+				<i *ngIf="!showNav" class="material-icons">menu</i>
+				<i *ngIf="showNav" class="material-icons">close</i>
 			</a>
 			<div class="logo">
 				<a [routerLink]="'/home'">NWFLT</a>
 			</div>
 			<ul class="nav clearfix">
 				<li *ngFor="let item of menuItems" [routerLinkActive]="'active'">
-					<a [routerLink]="item.location"><span>{{ item.display }}</span></a>
+					<a [routerLink]="item.location" (click)="navTo()"><span>{{ item.display }}</span></a>
 				</li>
 			</ul>
 		</div>

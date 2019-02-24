@@ -27,7 +27,7 @@ nav {
 	}
 
 	.hamburger {
-		@extend %block-relative;
+		position: relative;
 		width: $main-nav-height;
 		height: 100%;
 		line-height: $main-nav-height;
@@ -59,22 +59,20 @@ li {
 	&:before {
 		@extend %block-absolute-full;
 		@include opacity(0, 0);
-		@include animation(underline-F2R 300ms 1);
+		@include animation(underline-exit 300ms 1);
 		content: '';
 		top: auto;
 		left: 0%;
 		bottom: 0;
 		height:1px;
-		width: 1px;
+		width: 100%;
 		background: #fff;
 	}
 
 	&:hover {
 		&:before {
 			@include opacity(100, 1);
-			@include animation(underline-L2F 300ms 1);
-			left: 0;
-			width: 100%;
+			@include animation(underline-enter 300ms 1);
 		}
 	}
 
@@ -82,8 +80,6 @@ li {
 		&:before {
 			@include opacity(100, 1);
 			@include animation(none);
-			left: 0;
-			width: 100%;
 		}
 	}
 
@@ -108,10 +104,13 @@ li {
 
 @media screen and (max-width: 960px) {
 	.inner {
-		padding: 0 ($large-margin-mobile - 5);
+		padding: 0 0 0 0;
 	}
 	.hamburger {
 		display: block;
+	}
+	.logo {
+		padding-left: ($large-margin-mobile - 5)
 	}
 	.nav {
 		display: none;

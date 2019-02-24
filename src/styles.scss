@@ -91,11 +91,80 @@ app-root {
 	}
 }
 
+h2 {
+	@extend %block-relative;
+	font-size: 6em;
+	font-weight: 700;
+	color: #808080;
+	margin-bottom: $med-margin;
+	margin-left: 21px;
+}
+
+p {
+	font-size: 1.4em;
+}
+
+.main-content {
+	.inner {
+		@extend %block-relative;
+		width: 100%;
+		padding: $med-margin ($large-margin - 30px);
+	}	
+}
+
+section {
+	margin-bottom: $med-margin;
+}
+
 .clearfix {
 	&:before,
 	&:after {
 		content: '';
 		display: table;
 		clear: both;
+	}
+}
+
+
+@media screen and (max-width: 1559px) {
+	.card {
+		header {
+			height: 200px;
+
+			h3 {
+				font-size: 2em;
+				right: auto;
+				left: 20px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	h2 {
+		font-size: 5em;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	h2 {
+		font-size: 3em;
+		margin-left: 31px;
+	}
+
+	.main-content {
+		.inner {
+			padding: $med-margin 0;
+
+			p {
+				padding: 0 35px;
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 600px) {
+	h2 {
+		text-align: center;
 	}
 }

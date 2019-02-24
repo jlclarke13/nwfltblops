@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PageNotFoundComponent implements OnInit {
 
-	public heroTitle = '<div class="top-line">Oops!</div> There\'s nothing here!';
+	public heroTitle = '<div class="top-line">Oops!</div><div class="bottom-line">Nothing here!</div>';
 	
   constructor() { }
 

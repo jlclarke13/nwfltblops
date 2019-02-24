@@ -1,53 +1,53 @@
 /* Main Menu Underline on hover */
-@-webkit-keyframes underline-L2F {
-  0%   { left: 0; width: 0; @include opacity(0, 0); }
-  100% { left: 0; width: 100%; @include opacity(100, 1); }
+@-webkit-keyframes underline-enter {
+  0%   { @include opacity(0, 0); }
+  100% { @include opacity(100, 1); }
 }
-@-moz-keyframes underline-L2F {
-  0%   { left: 0; width: 0; @include opacity(0, 0); }
-  100% { left: 0; width: 100%; @include opacity(100, 1); }
+@-moz-keyframes underline-enter {
+  0%   { @include opacity(0, 0); }
+  100% { @include opacity(100, 1); }
 }
-@-o-keyframes underline-L2F {
-  0%   { left: 0; width: 0; @include opacity(0, 0); }
-  100% { left: 0; width: 100%; @include opacity(100, 1); }
+@-o-keyframes underline-enter {
+  0%   { @include opacity(0, 0); }
+  100% { @include opacity(100, 1); }
 }
-@keyframes underline-L2F {
-  0%   { left: 0; width: 0; @include opacity(0, 0); }
-  100% { left: 0; width: 100%; @include opacity(100, 1); }
+@keyframes underline-enter {
+  0%   { @include opacity(0, 0); }
+  100% { @include opacity(100, 1); }
 }
 
 /* Main Menu Underline on hover exit */
-@-webkit-keyframes underline-F2R {
-  0% { left: 0; width: 100%; @include opacity(100, 1); }
-  100%   { left: 100%; width: 0; @include opacity(0, 0); }
+@-webkit-keyframes underline-exit {
+  0%   { @include opacity(100, 1); }
+  100% { @include opacity(0, 0); }
 }
-@-moz-keyframes underline-F2R {
-  0% { left: 0; width: 100%; @include opacity(100, 1); }
-  100%   { left: 100%; width: 0; @include opacity(0, 0); }
+@-moz-keyframes underline-exit {
+  0%   { @include opacity(100, 1); }
+  100% { @include opacity(0, 0); }
 }
-@-o-keyframes underline-F2R {
-  0% { left: 0; width: 100%; @include opacity(100, 1); }
-  100%   { left: 100%; width: 0; @include opacity(0, 0); }
+@-o-keyframes underline-exit {
+  0%   { @include opacity(100, 1); }
+  100% { @include opacity(0, 0); }
 }
-@keyframes underline-F2R {
-  0% { left: 0; width: 100%; @include opacity(100, 1); }
-  100%   { left: 100%; width: 0; @include opacity(0, 0); }
+@keyframes underline-exit {
+  0%   { @include opacity(100, 1); }
+  100% { @include opacity(0, 0); }
 }
 
 
 @-webkit-keyframes title-float {
-  0% { top: 70px; @include opacity(0, 0); }
-  100%   { top: 0px; @include opacity(100, 1); }
+  0%   { top: 70px; @include opacity(0, 0); }
+  100% { top: 0px; @include opacity(100, 1); }
 }
 @-moz-keyframes title-float {
-  0% { top: 70px; @include opacity(0, 0); }
-  100%   { top: 0px; @include opacity(100, 1); }
+  0%   { top: 70px; @include opacity(0, 0); }
+  100% { top: 0px; @include opacity(100, 1); }
 }
 @-o-keyframes title-float {
-  0% { top: 70px; @include opacity(0, 0); }
-  100%   { top: 0px; @include opacity(100, 1); }
+  0%   { top: 70px; @include opacity(0, 0); }
+  100% { top: 0px; @include opacity(100, 1); }
 }
 @keyframes title-float {
-  0% { top: 70px; @include opacity(0, 0); }
-  100%   { top: 0px; @include opacity(100, 1); }
+  0%   { top: 70px; @include opacity(0, 0); }
+  100% { top: 0px; @include opacity(100, 1); }
 }

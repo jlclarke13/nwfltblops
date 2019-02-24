@@ -20,4 +20,8 @@ export class MainNavComponent implements OnInit {
   	this.showNav = !this.showNav;
   }
 
+  navTo() {
+    this.showNav = false;
+  }
+
 }

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-	public heroTitle = '<div class="top-line">NWFLT</div>Blops';
+	public heroTitle = '<div class="top-line">NWFLT</div><div class="bottom-line">Blops</div>';
 
   constructor() { }
 

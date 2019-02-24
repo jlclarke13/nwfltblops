@@ -1,20 +1,5 @@
 @import '~src/imports';
 
-h2 {
-	@extend %block-relative;
-	font-size: 6em;
-	font-weight: 700;
-	color: #808080;
-	margin-bottom: $med-margin;
-	margin-left: 21px;
-}
-
-.inner {
-	@extend %block-relative;
-	width: 100%;
-	padding: $med-margin ($large-margin - 30px);
-}
-
 img {
 	max-width: 100%;
 	height: auto;

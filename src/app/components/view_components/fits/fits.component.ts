@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FitsComponent implements OnInit {
 
-	public heroTitle = '<div class="top-line">NWFLT</div>Blops Fits';
+	public heroTitle = '<div class="top-line">NWFLT</div><div class="bottom-line">Blops Fits</div>';
 
 	fits: any[] = [
 		{ 
