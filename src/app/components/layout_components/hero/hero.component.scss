@@ -57,13 +57,13 @@ h1 {
 }
 
 .main-hero {
-	background: url('~src/assets/images/mainHero.png') no-repeat center center / cover;
+	background: url('~src/assets/images/mainHero.png') no-repeat center center / cover fixed;
 }
 .fits-hero {
-	background: url('~src/assets/images/fitsHero.png') no-repeat bottom right;
+	background: url('~src/assets/images/fitsHero.png') no-repeat bottom right / cover fixed;
 }
 .stars-sparse {
-	background: url('~src/assets/images/stars_sparse.png') no-repeat center right / cover;
+	background: url('~src/assets/images/stars_sparse.png') no-repeat center right / cover fixed;
 }
 
 .title-container {

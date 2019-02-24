@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FitsComponent implements OnInit {
 
+	copyCBoard: string = 'Copy to clipboard';
+
 	public heroTitle = '<div class="top-line">NWFLT</div><div class="bottom-line">Blops Fits</div>';
 
 	fits: any[] = [
