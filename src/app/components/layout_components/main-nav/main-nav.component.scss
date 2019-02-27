@@ -57,12 +57,6 @@ li {
 	height: 100%;
 	float: left;
 
-	&.include-anim {
-		&:before {
-			@include animation(underline-exit 300ms 1);
-		}
-	}
-
 	&:before {
 		@extend %block-absolute-full;
 		@include opacity(0, 0);
@@ -73,12 +67,13 @@ li {
 		height:1px;
 		width: 100%;
 		background: #fff;
+		@include transition(opacity 300ms linear);
 	}
 
 	&:hover {
 		&:before {
 			@include opacity(100, 1);
-			@include animation(underline-enter 300ms 1);
+			@include transition(opacity 300ms linear);
 		}
 	}
 
