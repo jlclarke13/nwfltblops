@@ -1,5 +1,6 @@
 <app-hero [innerBgClass]="'inner-bg-black'" [bgClass]="'fits-hero'">
 	<span hero-title [innerHtml]="heroTitle"></span>
+	<!-- <span hero-sub>Copy. Import. Go.</span> -->
 </app-hero>
 <div class="main-content">
 	<div class="inner">
@@ -11,7 +12,10 @@
 						<div class="card">
 							<header>
 								<img class="cover" [src]="'assets/images/' + ship.imgPath" />
-								<h3><a class="copy-btn" (click)="copyFit(ci, si, ship.fit)" [@copyAnim]="ship.state"><i class="material-icons">file_copy</i></a>{{ ship.name }}</h3>
+								<div class="heading-container">
+									<div class="copied" [@copyAnim]="ship.state"><p>Copied</p></div>
+									<h3><a class="copy-btn" (click)="copyFit(ci, si, ship.fit)"><i class="material-icons">file_copy</i> {{ ship.name }}</a></h3>
+								</div>
 							</header>
 							<div class="content">
 								<div class="inner">

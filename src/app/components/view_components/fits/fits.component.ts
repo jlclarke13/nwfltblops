@@ -8,15 +8,16 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
   animations: [
   	trigger('copyAnim', [
   		state('uncopied', style({
+  			opacity: 0
   		})),
   		state('copied', style({
-  			color: '#3eff72'
+  			opacity: 1
   		})),
   		transition('uncopied => copied', [
   			animate('0ms')
   		]),
   		transition('copied => uncopied', [
-  			animate('600ms')
+  			animate('2600ms')
   		])
   	])
   ]
@@ -309,6 +310,38 @@ Liquid Ozone x300
 Nanite Repair Paste x200`
 				}
 			]
+		},
+		{ 
+			category: 'Hunters',
+			ships: [
+				{
+					name: 'Blops Hunting Prospect',
+					imgPath: 'prospect.png',
+					state: 'uncopied',
+					fit: `[Prospect, Blops Prospect]
+Adaptive Nano Plating II
+Adaptive Nano Plating II
+400mm Rolled Tungsten Compact Plates
+Small Ancillary Armor Repairer
+
+Warp Scrambler II
+5MN Y-T8 Compact Microwarpdrive
+Initiated Compact Warp Disruptor
+
+Covert Cynosural Field Generator I
+Expanded Probe Launcher I
+Covert Ops Cloaking Device II
+
+Small Ancillary Current Router II
+Small Processor Overclocking Unit I
+
+
+
+
+Nanite Repair Paste x103
+Sisters Combat Scanner Probe x8`
+				}
+			]
 		}
 	];
 
@@ -337,7 +370,7 @@ Nanite Repair Paste x200`
   	this.fits[cidx].ships[sidx].state = 'copied';
   	setTimeout(() => {
   		this.fits[cidx].ships[sidx].state = 'uncopied';
-  	}, 600);
+  	}, 1600);
   }
 
 }

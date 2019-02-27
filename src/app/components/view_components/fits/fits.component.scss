@@ -31,11 +31,32 @@ img {
 		height: 300px;
 		object-fit: cover;
 
-		h3 {
-			@extend %white-on-black-text-shadow;
-			position: absolute;
+		.heading-container {
+			@extend %block-absolute;
+			left: auto;
+			top: auto;
 			right: 20px;
 			bottom: 20px;
+
+			.copied {
+				@extend %block-absolute;
+				top: -25px;
+				left: auto;
+				right: 13px;
+				background: rgba(155, 155, 155, 0.4);
+
+				p {
+					padding: 5px 10px;
+					font-weight: normal;
+					font-size: 1em;
+					text-transform: uppercase;
+					color: #fff;
+				}
+			}
+		}
+
+		h3 {
+			@extend %white-on-black-text-shadow;
 			color: #fff;
 			font-weight: 700;
 			font-size: 3em;
@@ -84,8 +105,6 @@ img {
 
 			h3 {
 				font-size: 2em;
-				right: auto;
-				left: 20px;
 
 				.copy-btn {
 					margin-right: 10px;
@@ -133,7 +152,6 @@ img {
 
 			h3 {
 				font-size: 2em;
-				left: 33px;
 			}
 		}
 	}
@@ -144,12 +162,6 @@ img {
 		header {
 			h3 {
 				font-size: 2em;
-				bottom: auto;
-				top: 50%;
-				left: 50%;
-				width: 100%;
-				text-align: center;
-				transform: translate(-50%, -50%);
 			}
 		}
 	}

@@ -65,11 +65,19 @@ h1 {
 .stars-sparse {
 	background: url('~src/assets/images/stars_sparse.png') no-repeat center right / cover fixed;
 }
+.landing-splash {
+	background: url('~src/assets/images/landingSplash.png') no-repeat center right / cover fixed;
+}
 
 .title-container {
 	@extend %in-block-relative;
 	margin-top: $large-margin;
 	margin-left: $large-margin - 10px;
+
+	p {
+		padding-left: 10px;
+		word-spacing: 20px;
+	}
 }
 
 
