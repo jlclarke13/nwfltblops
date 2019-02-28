@@ -1,0 +1,47 @@
+ul.step-list {
+	@extend %block-relative;
+	width: 100%;
+
+	> li {
+		width: 100%;
+
+		&:after,
+		&:before {
+			content: '';
+			display: table;
+			clear: both;
+		}
+
+		> div {
+			@extend %block-relative;
+			width: $lists-num-col-width;
+			margin-bottom: $med-margin;
+			float: left;
+
+			&:last-child {
+				width: calc(100% - #{$lists-num-col-width});
+				padding-left: 15px;
+			}
+
+			p {
+				padding-left: 0;
+			}
+		}
+	}
+}
+
+label {
+	@extend %in-block-relative;
+	height: 40px;
+	line-height: 40px;
+	color: $h2-color;
+	font-weight: bold;
+	font-size: $content-font-size;
+}
+.step {
+	width: 40px;
+	background: $h2-color;
+	color:#fff;
+	text-align: center;
+	float: right;
+}

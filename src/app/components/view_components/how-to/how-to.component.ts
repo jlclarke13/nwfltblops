@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HowToComponent implements OnInit {
 
-	public heroTitle = '<div class="top-line">NWFLT</div><div>Blobs Guide</div>';
+	public heroTitle = '<div class="top-line">NWFLT</div><div>Blops Guide</div>';
 
   constructor() { }
 

@@ -1,0 +1,57 @@
+@import '~src/imports';
+
+h3 {
+	margin: $med-margin;
+}
+
+a {
+	position: relative;
+	color: #ffa600;
+	cursor: pointer;
+
+	&.close {
+		position: absolute;
+		top: $med-margin + 10px;
+		right: $med-margin;
+		color: $h2-color;
+		z-index: 802;
+
+		i {
+			font-size: 3.5em;
+		}
+	}
+}
+
+
+.modal {
+	display: block;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #fff;
+	width: 90%;
+	height: auto;
+	min-height: 20px;
+	z-index: 801;
+}
+.backdrop {
+	display: block;
+	position: fixed;
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	background: rgba(0, 0, 0, 0.8);
+	z-index: 800;
+}
+
+p {
+	padding-left: $med-margin + 6px;
+	padding-right: $med-margin + 6px;
+	font-size: 1.4rem;
+}
+
+.content {
+	margin-bottom: $med-margin;
+}

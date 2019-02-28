@@ -11,6 +11,7 @@ import { HeaderComponent } from './components/layout_components/header/header.co
 import { HeroComponent } from './components/layout_components/hero/hero.component';
 import { MainNavComponent } from './components/layout_components/main-nav/main-nav.component';
 import { AddClassOnScrollDirective } from './directives/add-class-on-scroll/add-class-on-scroll.directive';
+import { QuickDefComponent } from './components/elements/quick-def/quick-def.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { AddClassOnScrollDirective } from './directives/add-class-on-scroll/add-
     HeaderComponent,
     HeroComponent,
     MainNavComponent,
-    AddClassOnScrollDirective
+    AddClassOnScrollDirective,
+    QuickDefComponent
   ],
   imports: [
     BrowserModule,

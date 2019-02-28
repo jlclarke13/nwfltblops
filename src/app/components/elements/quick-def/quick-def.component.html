@@ -1,0 +1,39 @@
+<a (click)="showModal()"><ng-content select="[item-name]"></ng-content></a>
+
+<div class="modal" *ngIf="defModal === 'bridgeShip' && modalVisible">
+	<a class="close" (click)="destroyModal()"><i class="material-icons">close</i></a>
+	<h3>The Bridge Ship</h3>
+	<div class="content">
+		<p>A Black Ops Battleship designed to bridge Covert Ops ships into battle. While there are a few different types, the most commonly used as a bridge is the Sin.</p>
+		<p>This pilot should be on your watchlist. Never warp to him without permission and never warp uncloaked.</p>
+	</div>
+</div>
+
+<div class="modal" *ngIf="defModal === 'safe' && modalVisible">
+	<a class="close" (click)="destroyModal()"><i class="material-icons">close</i></a>
+	<h3>Safe Spot</h3>
+	<div class="content">
+		<p>A spot in space that cannot be warped to from the overview. The safe spot should be preferably not inline with anything, however the importance of this depends on what you are flying. For the purpose of this fleet, it is ok if the safe is inline with a celestial.</p>
+		<p>To make a safe, you can use <span class="bold">ctrl + b</span> to open the bookmark dialogue. You can do this while warping. The bookmark will save on submit, so you can time that however you like.</p>
+	</div>
+</div>
+
+<div class="modal" *ngIf="defModal === 'hunters' && modalVisible">
+	<a class="close" (click)="destroyModal()"><i class="material-icons">close</i></a>
+	<h3>Hunters</h3>
+	<div class="content">
+		<p>Hunters will fly either a bomber or prospect with a Covert Ops Cyno. Their purpose is to find, and tackle targets for the Blops Fleet. When they find a target, they will light the cyno for the bridge.</p>
+		<p>You need Cyno Level 5 to light a Covert Ops Cyno.</p>
+	</div>
+</div>
+
+<div class="modal" *ngIf="defModal === 'bridgePortal' && modalVisible">
+	<a class="close" (click)="destroyModal()"><i class="material-icons">close</i></a>
+	<h3>The Bridge</h3>
+	<div class="content">
+		<p>The Bridge Ship will open a Bridge to the Hunter's cyno. At this point in time the entire fleet decloaks, right clicks the Bridger on their watch list, and clicks <span class="bold">Jump</span>.</p><p>You can also left click and hold on the Bridger's name in watch list. A radial dial with an empty space at the top will appear. The Bridge appears in that empty space when it is opened.</p>
+	</div>
+</div>
+
+<div class="backdrop" *ngIf="modalVisible" (click)="destroyModal()">
+</div>

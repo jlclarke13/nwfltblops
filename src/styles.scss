@@ -95,13 +95,22 @@ h2 {
 	@extend %block-relative;
 	font-size: 6em;
 	font-weight: 700;
-	color: #808080;
+	color: $h2-color;
+	margin-bottom: $med-margin;
+	margin-left: 21px;
+}
+
+h3 {
+	@extend %block-relative;
+	font-weight: 700;
+	font-size: 3em;
+	color: $h2-color;
 	margin-bottom: $med-margin;
 	margin-left: 21px;
 }
 
 p {
-	font-size: 1.4em;
+	font-size: $content-font-size;
 }
 
 .main-content {
@@ -118,6 +127,10 @@ p {
 
 section {
 	margin-bottom: $med-margin;
+}
+
+.bold {
+	font-weight: 700;
 }
 
 .clearfix {

@@ -58,8 +58,7 @@ img {
 		h3 {
 			@extend %white-on-black-text-shadow;
 			color: #fff;
-			font-weight: 700;
-			font-size: 3em;
+			margin: 0;
 
 			.copy-btn {
 				margin-right: 10px;
