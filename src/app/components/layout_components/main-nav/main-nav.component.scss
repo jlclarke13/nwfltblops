@@ -15,9 +15,10 @@ nav {
 
 .inner {
 	@extend %block-relative-full;
+	@include transition(background 300ms ease);
 	padding: 0 $large-margin;
 	background: rgba(32, 33, 36, 0);
-	@include transition(background 300ms ease);
+	z-index: 999;
 }
 
 .inner-container {

@@ -27,11 +27,35 @@
 	</div>
 </div>
 
-<div class="modal" *ngIf="defModal === 'bridgePortal' && modalVisible">
+<div class="modal" *ngIf="defModal === 'takingTheBridge' && modalVisible">
 	<a class="close" (click)="destroyModal()"><i class="material-icons">close</i></a>
-	<h3>The Bridge</h3>
+	<h3>Taking The Bridge</h3>
 	<div class="content">
 		<p>The Bridge Ship will open a Bridge to the Hunter's cyno. At this point in time the entire fleet decloaks, right clicks the Bridger on their watch list, and clicks <span class="bold">Jump</span>.</p><p>You can also left click and hold on the Bridger's name in watch list. A radial dial with an empty space at the top will appear. The Bridge appears in that empty space when it is opened.</p>
+	</div>
+</div>
+
+<div class="modal" *ngIf="defModal === 'bigShiny' && modalVisible">
+	<a class="close" (click)="destroyModal()"><i class="material-icons">close</i></a>
+	<h3>Shiny</h3>
+	<div class="content">
+		<p>An enemy carrier or something equally expensive.</p>
+	</div>
+</div>
+
+<div class="modal" *ngIf="defModal === 'alignCelestial' && modalVisible">
+	<a class="close" (click)="destroyModal()"><i class="material-icons">close</i></a>
+	<h3>Align To A Celestial</h3>
+	<div class="content">
+		<p>Align to a moon or planet. Make sure it aligns you away from the target. A good way to do this is to press F11 to open a small solar system map. You can see which direction you are facing, and choose a good align.</p>
+	</div>
+</div>
+
+<div class="modal" *ngIf="defModal === 'blopsShip' && modalVisible">
+	<a class="close" (click)="destroyModal()"><i class="material-icons">close</i></a>
+	<h3>Black Ops / Covert Ops Ship</h3>
+	<div class="content">
+		<p>Generally any ship that can fit a <span class="bold">Covert Cyno</span>. You can see the ones we currently use on <a [routerLink]="'/fits'">The Fittings Page</a>.</p>
 	</div>
 </div>
 

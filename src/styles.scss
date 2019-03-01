@@ -133,6 +133,10 @@ section {
 	font-weight: 700;
 }
 
+.capitalize {
+	text-transform: capitalize;
+}
+
 .clearfix {
 	&:before,
 	&:after {

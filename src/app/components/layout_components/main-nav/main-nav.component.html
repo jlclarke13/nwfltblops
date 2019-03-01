@@ -10,7 +10,7 @@
 			</div>
 			<ul class="nav clearfix">
 				<li *ngFor="let item of menuItems" [routerLinkActive]="'active'">
-					<a [routerLink]="item.location" (click)="navTo()"><span>{{ item.display }}</span></a>
+					<a [routerLink]="item.location" (click)="onNav()"><span>{{ item.display }}</span></a>
 				</li>
 			</ul>
 		</div>
