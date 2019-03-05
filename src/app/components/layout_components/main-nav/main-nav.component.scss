@@ -4,6 +4,7 @@ nav {
 	@extend %block-fixed;
 	width: 100%;
 	height: $main-nav-height;
+	z-index: 999;
 
 	&.scrollActive {
 		.inner {
@@ -18,7 +19,6 @@ nav {
 	@include transition(background 300ms ease);
 	padding: 0 $large-margin;
 	background: rgba(32, 33, 36, 0);
-	z-index: 999;
 }
 
 .inner-container {

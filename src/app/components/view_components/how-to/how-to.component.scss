@@ -1,2 +1,22 @@
 @import '~src/imports';
 @import '~src/scss/lists.scss';
+
+
+.subtitle {
+	margin-bottom: 30px;
+}
+
+.step {
+	&.do {
+		background: #4CAF50;
+	}
+
+	&.dont {
+		background: #f44336;
+	}
+
+	i {
+		font-size: inherit;
+		line-height: inherit;
+	}
+}

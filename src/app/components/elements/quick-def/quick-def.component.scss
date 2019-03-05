@@ -32,7 +32,9 @@ a {
 	background: #fff;
 	width: 90%;
 	height: auto;
+	max-height: calc(100% - 160px);
 	min-height: 20px;
+	overflow: auto;
 	z-index: 801;
 }
 .backdrop {
@@ -54,4 +56,21 @@ p {
 
 .content {
 	margin-bottom: $med-margin;
+}
+
+@media screen and (max-width: 960px) {
+	h3 {
+		font-size: 2em;
+		margin: 30px;
+	}
+	a {
+		&.close {
+	    top: 35px;
+	    right: 20px;
+
+	    i {
+				font-size: 2.5em;
+			}
+		}
+	}
 }

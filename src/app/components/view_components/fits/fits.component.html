@@ -5,26 +5,30 @@
 <div class="main-content">
 	<div class="inner">
 		<ul>
-			<li *ngFor="let category of fits; let ci = index">
-				<h2>{{ category.category }}</h2>
-				<ul class="cards clearfix">
-					<li *ngFor="let ship of category.ships; let si = index">
-						<div class="card">
-							<header>
-								<img class="cover" [src]="'assets/images/' + ship.imgPath" />
-								<div class="heading-container">
-									<div class="copied" [@copyAnim]="ship.state"><p>Copied</p></div>
-									<h3><a class="copy-btn" (click)="copyFit(ci, si, ship.fit)"><i class="material-icons">file_copy</i> {{ ship.name }}</a></h3>
-								</div>
-							</header>
-							<div class="content">
-								<div class="inner">
-									<pre>{{ ship.fit }}</pre>
+			<li *ngFor="let category of fits; let ci = index; let last = last" [class.last-item]="last">
+				<header>
+					<h2>{{ category.category }}</h2>
+				</header>
+				<section>
+					<ul class="cards clearfix">
+						<li *ngFor="let ship of category.ships; let si = index">
+							<div class="card">
+								<header>
+									<img class="cover" [src]="'assets/images/' + ship.imgPath" />
+									<div class="heading-container">
+										<div class="copied" [@copyAnim]="ship.state"><p>Copied</p></div>
+										<h3><a class="copy-btn" (click)="copyFit(ci, si, ship.fit)"><i class="material-icons">file_copy</i> {{ ship.name }}</a></h3>
+									</div>
+								</header>
+								<div class="content">
+									<div class="inner">
+										<pre>{{ ship.fit }}</pre>
+									</div>
 								</div>
 							</div>
-						</div>
-					</li>
-				</ul>
+						</li>
+					</ul>
+				</section>
 			</li>
 		</ul>
 	</div>

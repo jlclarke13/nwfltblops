@@ -96,7 +96,6 @@ h2 {
 	font-size: 6em;
 	font-weight: 700;
 	color: $h2-color;
-	margin-bottom: $med-margin;
 	margin-left: 21px;
 }
 
@@ -117,16 +116,30 @@ p {
 	.inner {
 		@extend %block-relative;
 		width: 100%;
-		padding: $med-margin ($large-margin - 30px);
 	}	
+
+	header,
+	section {
+		@extend %block-relative;
+		width: 100%;
+		padding: $large-margin ($large-margin - 30px);
+
+		&.last {
+			margin-bottom: $med-margin;
+		}
+	}
+	header {
+		background: #fff;
+	}
+
+	section {
+		padding-top: 0;
+		padding-bottom: 0;
+	}
 
 	p {
 		padding: ($small-margin - 15px) $small-margin;
 	}
-}
-
-section {
-	margin-bottom: $med-margin;
 }
 
 .bold {
@@ -137,7 +150,26 @@ section {
 	text-transform: capitalize;
 }
 
-.clearfix {
+.columns {
+	@extend %block-relative;
+	width:100%;
+}
+.two-50 {
+	> div {
+		@extend %block-relative;
+		width: 50%;
+		padding-right: 15px;
+		float: left;
+
+		&:last-child {
+			padding-right: 0;
+			padding-left: 15px;
+		}
+	}
+}
+
+.clearfix,
+.columns {
 	&:before,
 	&:after {
 		content: '';
@@ -149,6 +181,19 @@ section {
 @media screen and (max-width: 1080px) {
 	h2 {
 		font-size: 5em;
+	}
+
+	.two-50 {
+		> div {
+			padding: 0;
+			width: 100%;
+			margin-bottom: 30px;
+			float: none;
+
+			&:last-child {
+				padding: 0;
+			}
+		}
 	}
 }
 
@@ -162,10 +207,24 @@ section {
 		.inner {
 			padding: $med-margin 0;
 
+			header,
+			section {
+				padding-left: 35px;
+				padding-right: 35px;
+			}
+
+			header {
+				padding-top: $med-margin;
+				padding-bottom: $med-margin;
+			}
+
 			p {
 				padding: 0 35px;
 			}
 		}
+	}
+	.main-content {
+
 	}
 }
 
