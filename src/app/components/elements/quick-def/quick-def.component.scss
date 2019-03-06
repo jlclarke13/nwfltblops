@@ -5,10 +5,6 @@ h3 {
 }
 
 a {
-	position: relative;
-	color: #ffa600;
-	cursor: pointer;
-
 	&.close {
 		position: absolute;
 		top: $med-margin + 10px;
@@ -63,6 +59,7 @@ p {
 		font-size: 2em;
 		margin: 30px;
 	}
+
 	a {
 		&.close {
 	    top: 35px;
@@ -72,5 +69,10 @@ p {
 				font-size: 2.5em;
 			}
 		}
+	}
+
+	p {
+		padding-left: 31px;
+		padding-right: 31px;
 	}
 }

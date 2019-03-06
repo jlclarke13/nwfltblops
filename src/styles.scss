@@ -91,12 +91,35 @@ app-root {
 	}
 }
 
+a {
+	position: relative;
+	color: $link-color;
+	cursor: pointer;
+	font-weight: 700;
+	text-decoration: none;
+
+	&:hover {
+		color: $link-hover;
+	}
+}
+
 h2 {
 	@extend %block-relative;
 	font-size: 6em;
 	font-weight: 700;
 	color: $h2-color;
-	margin-left: 21px;
+	margin-left: -9px;
+
+	&:after {
+		@extend %block-absolute;
+		content: '';
+		top: auto;
+		left: 9px;
+		bottom: -15px;
+		width: 40px;
+		height: 10px;
+		background: $link-color;
+	}
 }
 
 h3 {
@@ -122,13 +145,14 @@ p {
 	section {
 		@extend %block-relative;
 		width: 100%;
-		padding: $large-margin ($large-margin - 30px);
+		padding: $med-margin ($large-margin - 30px);
 
 		&.last {
 			margin-bottom: $med-margin;
 		}
 	}
 	header {
+		padding: 120px 110px 80px;
 		background: #fff;
 	}
 
@@ -138,7 +162,7 @@ p {
 	}
 
 	p {
-		padding: ($small-margin - 15px) $small-margin;
+		padding: ($small-margin - 15px) 0;
 	}
 }
 
@@ -146,8 +170,20 @@ p {
 	font-weight: 700;
 }
 
+.highlight-green {
+	color: $highlight-green;
+}
+
+.highlight-red {
+	color: $highlight-red;
+}
+
 .capitalize {
 	text-transform: capitalize;
+}
+
+.top-line {
+	color: #2d2d2d;
 }
 
 .columns {
@@ -158,12 +194,12 @@ p {
 	> div {
 		@extend %block-relative;
 		width: 50%;
-		padding-right: 15px;
+		padding-right: 60px;
 		float: left;
 
 		&:last-child {
 			padding-right: 0;
-			padding-left: 15px;
+			padding-left: 60px;
 		}
 	}
 }
@@ -187,7 +223,7 @@ p {
 		> div {
 			padding: 0;
 			width: 100%;
-			margin-bottom: 30px;
+			margin-bottom: 60px;
 			float: none;
 
 			&:last-child {
@@ -200,12 +236,15 @@ p {
 @media screen and (max-width: 960px) {
 	h2 {
 		font-size: 3em;
-		margin-left: 31px;
+		margin-left: -4px;
+
+		&:after {
+			left: 4px;
+		}
 	}
 
 	.main-content {
 		.inner {
-			padding: $med-margin 0;
 
 			header,
 			section {
@@ -216,10 +255,6 @@ p {
 			header {
 				padding-top: $med-margin;
 				padding-bottom: $med-margin;
-			}
-
-			p {
-				padding: 0 35px;
 			}
 		}
 	}
@@ -232,5 +267,10 @@ p {
 	h2 {
 		text-align: center;
 		margin-left: 0;
+
+		&:after {
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
 	}
 }

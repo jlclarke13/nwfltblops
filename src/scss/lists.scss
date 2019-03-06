@@ -27,6 +27,12 @@ ul.step-list {
 				padding-left: 0;
 			}
 		}
+
+		&:last-child {
+			> div {
+				margin-bottom: 0;
+			}
+		}
 	}
 }
 
