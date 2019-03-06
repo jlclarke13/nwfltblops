@@ -8,7 +8,6 @@ nav {
 
 	&.scrollActive {
 		.inner {
-			@include transition(box-shadow 300ms ease);
 			@include box-shadow((0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12)));
 			background: rgba(32, 33, 36, 0.96);
 		}
@@ -17,7 +16,7 @@ nav {
 
 .inner {
 	@extend %block-relative-full;
-	@include transition(background 300ms ease);
+	@include transition(all 300ms ease);
 	@include box-shadow((0 2px 4px -1px rgba(0, 0, 0, 0), 0 4px 5px 0 rgba(0, 0, 0, 0), 0 1px 10px 0 rgba(0, 0, 0, 0)));
 	padding: 0 110px;
 	background: rgba(32, 33, 36, 0);
