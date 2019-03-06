@@ -1,0 +1,82 @@
+[
+	{ 
+		"category": "Damage",
+		"ships": [
+			{
+				"name": "Hound",
+				"imgPath": "hound.png",
+				"state": "uncopied",
+				"fit": "[Hound, Hound]\nNanofiber Internal Structure II\nBallistic Control System II\nBallistic Control System II\n\nPhased Scoped Target Painter\nRepublic Fleet Medium Shield Extender\n5MN Y-T8 Compact Microwarpdrive\n\nPrototype 'Arbalest' Torpedo Launcher\nPrototype 'Arbalest' Torpedo Launcher\nPrototype 'Arbalest' Torpedo Launcher\nCovert Ops Cloaking Device II\n\nSmall Warhead Rigor Catalyst II\nSmall Ancillary Current Router II\n\n\n\n\nCaldari Navy Nova Torpedo x607\nNanite Repair Paste x120"
+			},
+			{
+				"name": "Polarized Hound",
+				"imgPath": "hound2.png",
+				"state": "uncopied",
+				"fit": "[Hound, Polarized Hound]\nBallistic Control System II\nBallistic Control System II\nNanofiber Internal Structure II\n\nRepublic Fleet Medium Shield Extender\nPhased Scoped Target Painter\n5MN Y-T8 Compact Microwarpdrive\n\nPolarized Torpedo Launcher\nPolarized Torpedo Launcher\nPolarized Torpedo Launcher\nCovert Ops Cloaking Device II\n\nSmall Bay Loading Accelerator II\nSmall Ancillary Current Router I\n\n\n\n\nNova Rage Torpedo x680\nCaldari Navy Nova Torpedo x500\nNanite Repair Paste x350"
+			},
+			{
+				"name": "Purifier",
+				"imgPath": "purifier.png",
+				"state": "uncopied",
+				"fit": "[Purifier, Purifier]\nNanofiber Internal Structure II\nBallistic Control System II\nBallistic Control System II\n\nPhased Scoped Target Painter\nMedium F-S9 Regolith Compact Shield Extender\n5MN Y-T8 Compact Microwarpdrive\n\n[Empty High slot]\nCovert Ops Cloaking Device II\nPrototype 'Arbalest' Torpedo Launcher\nPrototype 'Arbalest' Torpedo Launcher\nPrototype 'Arbalest' Torpedo Launcher\n\nSmall Bay Loading Accelerator II\nSmall Low Friction Nozzle Joints I\n\n\n\n\nCaldari Navy Mjolnir Torpedo x408\nNanite Repair Paste x30"
+			},
+			{
+				"name": "Polarized Purifier",
+				"imgPath": "purifier2.png",
+				"state": "uncopied",
+				"fit": "[Purifier, PolarizedPurifier]\nNanofiber Internal Structure II\nBallistic Control System II\nBallistic Control System II\n\nMedium F-S9 Regolith Compact Shield Extender\nPhased Scoped Target Painter\n5MN Y-T8 Compact Microwarpdrive\n\nPolarized Torpedo Launcher\nPolarized Torpedo Launcher\nPolarized Torpedo Launcher\nCovert Ops Cloaking Device II\n\nSmall Bay Loading Accelerator II\nSmall Low Friction Nozzle Joints I\n\n\n\n\nMjolnir Rage Torpedo x500\nCaldari Navy Mjolnir Torpedo x500\nNanite Repair Paste x250"
+			},
+			{
+				"name": "Manticore",
+				"imgPath": "manticore.png",
+				"state": "uncopied",
+				"fit": "[Manticore, Manticore]\nNanofiber Internal Structure II\nBallistic Control System II\n\nMedium F-S9 Regolith Compact Shield Extender\nWarp Disruptor II\nPhased Muon Scoped Sensor Dampener\n5MN Y-T8 Compact Microwarpdrive\n\nPrototype 'Arbalest' Torpedo Launcher\nPrototype 'Arbalest' Torpedo Launcher\nPrototype 'Arbalest' Torpedo Launcher\nCovert Ops Cloaking Device II\n\nSmall Bay Loading Accelerator I\nSmall Ancillary Current Router II\n\n\n\n\nCaldari Navy Scourge Torpedo x300\nNanite Repair Paste x30\nScan Resolution Dampening Script x1\nTargeting Range Dampening Script x1"
+			},
+			{
+				"name": "Nemesis",
+				"imgPath": "nemesis.png",
+				"state": "uncopied",
+				"fit": "[Nemesis, Nemesis]\nMicro Auxiliary Power Core I\nBallistic Control System II\n\nPhased Scoped Target Painter\nMedium F-S9 Regolith Compact Shield Extender\nWarp Disruptor II\n5MN Y-T8 Compact Microwarpdrive\n\n[Empty High slot]\nPrototype 'Arbalest' Torpedo Launcher\nPrototype 'Arbalest' Torpedo Launcher\nPrototype 'Arbalest' Torpedo Launcher\nCovert Ops Cloaking Device II\n\nSmall Bay Loading Accelerator II\nSmall Low Friction Nozzle Joints I\n\n\n\n\nCaldari Navy Inferno Torpedo x408\nNanite Repair Paste x30"
+			}
+		]
+	},
+	{ 
+		"category": "Tackle",
+		"ships": [
+			{
+				"name": "Blops Tackle Astero",
+				"imgPath": "astero.png",
+				"state": "uncopied",
+				"fit": "[Astero, blops tackle astero]\nSmall Ancillary Armor Repairer\n200mm Steel Plates II\nReactive Armor Hardener\nDamage Control II\n\nWarp Scrambler II\nWarp Disruptor II\nFleeting Compact Stasis Webifier\n5MN Quad LiF Restrained Microwarpdrive\n\n[Empty High slot]\nCovert Ops Cloaking Device II\n\nSmall Trimark Armor Pump II\nSmall Trimark Armor Pump II\nSmall Anti-Explosive Pump II\n\n\n\nImperial Navy Acolyte x5\nCaldari Navy Hornet x5\nRepublic Fleet Warrior x5\n\nNanite Repair Paste x164"
+			}
+		]
+	},
+	{ 
+		"category": "Electronics",
+		"ships": [
+			{
+				"name": "Pilgrim",
+				"imgPath": "pilgrim.png",
+				"state": "uncopied",
+				"fit": "[Pilgrim, NWFLT Pilgrim]\n\nDamage Control II\nImperial Navy Energized Adaptive Nano Membrane\nFederation Navy 1600mm Steel Plates\nImperial Navy Energized Adaptive Nano Membrane\nPower Diagnostic System II\n\n50MN Quad LiF Restrained Microwarpdrive\nTracking Disruptor II, Tracking Speed Disruption Script\nTracking Disruptor II, Tracking Speed Disruption Script\nTracking Disruptor II, Tracking Speed Disruption Script\nSensor Booster II, Scan Resolution Script\n\nCovert Ops Cloaking Device II\nCorpum C-Type Medium Energy Neutralizer\nCorpum C-Type Medium Energy Nosferatu\nCorpum C-Type Medium Energy Neutralizer\n\nMedium Tracking Diagnostic Subroutines II\nMedium Polycarbon Engine Housing I\n\n\nWarrior II x5\nHornet EC-300 x5\nValkyrie II x5\nValkyrie II x3\nWarrior II x4\n\n\nOptimal Range Disruption Script x3"
+			},
+			{
+				"name": "Falcon",
+				"imgPath": "falcon.png",
+				"state": "uncopied",
+				"fit": "[Falcon, NWFLT Falcon]\n\nDamage Control II\nSignal Distortion Amplifier II\nSignal Distortion Amplifier II\n\nLadar ECM II\nLadar ECM II\nLadar ECM II\n50MN Quad LiF Restrained Microwarpdrive\nRepublic Fleet Large Shield Extender\nRepublic Fleet Large Shield Extender\nMagnetometric ECM II\n\nMedium Solace Scoped Remote Armor Repairer\nMedium Solace Scoped Remote Armor Repairer\nCovert Cynosural Field Generator I\nCovert Ops Cloaking Device II\n\nMedium Particle Dispersion Projector II\nMedium Particle Dispersion Projector II\n\n\nWarrior II x2\n\n\nLiquid Ozone x300\nNanite Repair Paste x200"
+			}
+		]
+	},
+	{ 
+		"category": "Hunters",
+		"ships": [
+			{
+				"name": "Blops Hunting Prospect",
+				"imgPath": "prospect.png",
+				"state": "uncopied",
+				"fit": "[Prospect, Blops Prospect]\nAdaptive Nano Plating II\nAdaptive Nano Plating II\n400mm Rolled Tungsten Compact Plates\nSmall Ancillary Armor Repairer\n\nWarp Scrambler II\n5MN Y-T8 Compact Microwarpdrive\nInitiated Compact Warp Disruptor\n\nCovert Cynosural Field Generator I\nExpanded Probe Launcher I\nCovert Ops Cloaking Device II\n\nSmall Ancillary Current Router II\nSmall Processor Overclocking Unit I\n\n\n\n\nNanite Repair Paste x103\nSisters Combat Scanner Probe x8"
+			}
+		]
+	}
+]

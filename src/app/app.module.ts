@@ -6,13 +6,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ParallaxScrollModule} from 'ng2-parallaxscroll';
 import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AddClassOnScrollDirective } from './directives/add-class-on-scroll/add-class-on-scroll.directive';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/layout_components/footer/footer.component';
 import { HeaderComponent } from './components/layout_components/header/header.component';
 import { HeroComponent } from './components/layout_components/hero/hero.component';
 import { MainNavComponent } from './components/layout_components/main-nav/main-nav.component';
-import { AddClassOnScrollDirective } from './directives/add-class-on-scroll/add-class-on-scroll.directive';
 import { QuickDefComponent } from './components/elements/quick-def/quick-def.component';
 
 
@@ -33,7 +35,8 @@ import { QuickDefComponent } from './components/elements/quick-def/quick-def.com
     BrowserAnimationsModule,
     ParallaxScrollModule,
     NgxPageScrollCoreModule,
-    NgxPageScrollModule
+    NgxPageScrollModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
