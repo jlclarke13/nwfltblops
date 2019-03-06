@@ -51,3 +51,25 @@
   0%   { top: 70px; @include opacity(0, 0); }
   100% { top: 0px; @include opacity(100, 1); }
 }
+
+
+@-webkit-keyframes bounce {
+  0% { @include transform(translateX(0) translateY(4px) translateZ(0)); }
+  50% { @include transform(translateX(0) translateY(-4px) translateZ(0)); }
+  100% { @include transform(translateX(0) translateY(4px) translateZ(0)); }
+}
+@-moz-keyframes bounce {
+  0% { @include transform(translateX(0) translateY(4px) translateZ(0)); }
+  50% { @include transform(translateX(0) translateY(-4px) translateZ(0)); }
+  100% { @include transform(translateX(0) translateY(4px) translateZ(0)); }
+}
+@-o-keyframes bounce {
+  0% { @include transform(translateX(0) translateY(4px) translateZ(0)); }
+  50% { @include transform(translateX(0) translateY(-4px) translateZ(0)); }
+  100% { @include transform(translateX(0) translateY(4px) translateZ(0)); }
+}
+@keyframes bounce {
+  0% { @include transform(translateX(0) translateY(4px) translateZ(0)); }
+  50% { @include transform(translateX(0) translateY(-4px) translateZ(0)); }
+  100% { @include transform(translateX(0) translateY(4px) translateZ(0)); }
+}

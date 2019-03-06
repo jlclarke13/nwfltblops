@@ -28,3 +28,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ## Paralax Scroll
 https://github.com/TyrantWave/ng2-parallaxscroll
+
+## ngx-page-scroll
+https://github.com/Nolanus/ngx-page-scroll#readme

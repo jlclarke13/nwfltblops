@@ -2,7 +2,7 @@
 	<span hero-title [innerHtml]="heroTitle"></span>
 	<!-- <span hero-sub>Copy. Import. Go.</span> -->
 </app-hero>
-<div class="main-content">
+<div class="main-content" id="mainContent">
 	<div class="inner">
 		<ul>
 			<li *ngFor="let category of fits; let ci = index; let last = last" [class.last-item]="last">

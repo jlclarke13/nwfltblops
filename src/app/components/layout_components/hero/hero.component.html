@@ -4,4 +4,7 @@
 		<h1><ng-content select="[hero-title]"></ng-content></h1>
 		<p><ng-content select="[hero-sub]"></ng-content></p>
 	</div>
+	<div class="scroll-btn">
+		<a pageScroll [pageScrollEasing]="myEasing" [pageScrollDuration]="700" href="#mainContent"><i class="material-icons">keyboard_arrow_down</i></a>
+	</div>
 </div>

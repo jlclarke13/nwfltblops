@@ -4,6 +4,8 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule, RoutingComponents } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ParallaxScrollModule} from 'ng2-parallaxscroll';
+import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
+import { NgxPageScrollModule } from 'ngx-page-scroll';
 
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/layout_components/footer/footer.component';
@@ -29,7 +31,9 @@ import { QuickDefComponent } from './components/elements/quick-def/quick-def.com
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    ParallaxScrollModule
+    ParallaxScrollModule,
+    NgxPageScrollCoreModule,
+    NgxPageScrollModule
   ],
   providers: [],
   bootstrap: [AppComponent]
