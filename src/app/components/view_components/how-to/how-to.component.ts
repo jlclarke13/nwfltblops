@@ -9,7 +9,8 @@ export class HowToComponent implements OnInit {
 
 	public heroTitle = '<div class="top-line">NWFLT</div><div>Blops Guide</div>';
 
-  constructor() { }
+  constructor(
+  ) { }
 
   ngOnInit() {
   }

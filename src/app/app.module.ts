@@ -8,6 +8,8 @@ import { NgxPageScrollCoreModule } from 'ngx-page-scroll-core';
 import { NgxPageScrollModule } from 'ngx-page-scroll';
 import { HttpClientModule } from '@angular/common/http';
 
+import { WINDOW_PROVIDERS } from "./services/window/window.service";
+
 import { AddClassOnScrollDirective } from './directives/add-class-on-scroll/add-class-on-scroll.directive';
 
 import { AppComponent } from './app.component';
@@ -38,7 +40,7 @@ import { QuickDefComponent } from './components/elements/quick-def/quick-def.com
     NgxPageScrollModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [ WINDOW_PROVIDERS ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

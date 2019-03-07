@@ -1,10 +1,10 @@
 <div class="inner" ngClass="{{ innerBgClass }}">
 	<div class="background" ngClass="{{ bgClass }}" parallax [config]="{axis: 'Y', speed: -.3, cssUnit: 'px'}"></div>
-	<div class="title-container">
+	<div class="title-container" [ngStyle]="parallaxHeader()">
 		<h1><ng-content select="[hero-title]"></ng-content></h1>
 		<p><ng-content select="[hero-sub]"></ng-content></p>
 	</div>
-	<div class="scroll-btn">
+	<div class="scroll-btn" [ngStyle]="buttonOpacity()">
 		<a pageScroll [pageScrollEasing]="myEasing" [pageScrollDuration]="700" [pageScrollOffset]="72" href="#mainContent"><i class="material-icons">keyboard_arrow_down</i></a>
 	</div>
 </div>

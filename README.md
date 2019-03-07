@@ -31,3 +31,6 @@ https://github.com/TyrantWave/ng2-parallaxscroll
 
 ## ngx-page-scroll
 https://github.com/Nolanus/ngx-page-scroll#readme
+
+## For My Windows Service
+https://brianflove.com/2016/10/10/angular-2-window-scroll-event-using-hostlistener/
