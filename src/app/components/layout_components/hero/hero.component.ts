@@ -14,7 +14,13 @@ export class HeroComponent implements OnInit {
 	@Input() bgClass: string;
 	@Input() innerBgClass: string;
 
-  public scrollPos: number = 0;
+  scrollPos: number = 0;
+  screenWidth: number = this.window.innerWidth;
+  screenHeight: number;
+  cssProperty: any = -1;
+  headerParallax: boolean = true;
+
+
 
 	public myEasing: EasingLogic = (t: number, b: number, c: number, d: number): number => {
     // easeInOutExpo easing
@@ -40,6 +46,13 @@ export class HeroComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.setCssProperty();
+  }
+
+  @HostListener("window:resize", [])
+  onWindowResize() {
+    this.screenWidth = this.window.innerWidth;
+    this.setCssProperty();
   }
 
   @HostListener("window:scroll", [])
@@ -51,42 +64,62 @@ export class HeroComponent implements OnInit {
     this.scrollPos = number;
   }
 
+  setCssProperty() {
+    if (this.screenWidth > 600) {
+      this.cssProperty = "top";
+    } else {
+      this.cssProperty = "marginTop";
+    }
+  }
+
   headerTransform() {
-    let multiplier:number = 1.1;
+    let multiplier:number = 0.7;
     let topVal: number;
     if (this.scrollPos > 0) {
-      topVal = (this.scrollPos * multiplier) + 140;
+      topVal = (this.scrollPos * multiplier);
     } else {
-      topVal = 140;
+      topVal = -1;
+      this.headerParallax = false;
     }
     return topVal;
   }
 
   headerOpacity() {
-    let multiplier:number = 0.005;
+    let multiplier:number = 0.00166;
     let opacVal:number;
 
     if (this.scrollPos > 0) {
       opacVal = 1 - (this.scrollPos * multiplier);
+
+      if (opacVal > 0 && opacVal < 1) {
+        return opacVal;
+      } else if (opacVal >= 1) {
+        return 1;
+      }
+
+      return 0;
+
     } else {
-      opacVal = 1;
+      this.headerParallax = false;
+      return -1;
     }
-
-    if (opacVal > 0 && opacVal < 1) {
-      return opacVal;
-    } else if (opacVal >= 1) {
-      return 1;
-    }
-
-    return 0;
 
   }
 
   parallaxHeader() {
-    let mt: number = this.headerTransform();
+    let top: number = this.headerTransform();
     let opac: number = this.headerOpacity();
 
-    return {'margin-top.px': mt, opacity: opac};
+    if (this.headerParallax !== false && this.cssProperty !== -1) {
+      if (this.cssProperty === "top") {
+        return {'top.px': top, opacity: opac}; 
+      } else if (this.cssProperty === "marginTop") {
+        return {'margin-top.px': top, opacity: opac}; 
+      }
+    }
+
+    this.headerParallax = true;
+    return {}
 
   }
 
@@ -94,7 +127,12 @@ export class HeroComponent implements OnInit {
     
     let opac: number = this.headerOpacity();
 
-    return {opacity: opac};
+    if (this.headerParallax !== false && this.cssProperty !== -1) {
+      return {opacity: opac};
+    }
+
+    this.headerParallax = true;
+    return {};
 
   }
 
